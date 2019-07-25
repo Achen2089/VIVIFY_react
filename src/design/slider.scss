@@ -1,0 +1,69 @@
+.colorChangeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-top: 2px solid white;
+}
+
+fieldset {
+  border: none;
+  margin-bottom: 4em;
+  width: 50%;
+  color: white;
+  align-items: center;
+}
+
+.sliderLabel {
+  font-size: 1.5em;
+}
+
+.hexCode {
+  margin-top: 2em;
+  margin-bottom: 1.5em;
+  padding: 0.75em;
+  width: 15%;
+  text-align: center;
+  font-size: 3em;
+  border-radius: 0.3em;
+}
+
+.slider {
+  width: 90%;
+  -webkit-appearance: none;
+  height: 15px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.865);
+  background: #4c4c4d;
+  outline: none;
+  -webkit-transition: 0.02s;
+  transition: opacity 0.2s;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+button {
+  background-color: rgb(184, 184, 184);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 2em;
+  font-weight: bold;
+  padding: 0.75em;
+  border-radius: 0.3em;
+  width: 20%;
+}
+
+button:hover {
+  background-color: gray;
+}

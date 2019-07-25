@@ -1,0 +1,133 @@
+.cycleOptions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.cycleDescription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+}
+
+#cycleContainer {
+  border-top: solid 2px white;
+  color: white;
+}
+
+.cycle {
+  margin-top: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.cycleParagraph {
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.516);
+  text-align: center;
+}
+
+$accentcolor: #6e6d71;
+$darkcolor: #4c4c4d;
+
+.radioButton {
+  position: relative;
+  display: block;
+  label {
+    font-size: 1.5em;
+    text-align: center;
+    width: 10em;
+    display: block;
+    background: lighten($accentcolor, 30%);
+    color: $darkcolor;
+    border-radius: 5px;
+    padding: 1em;
+    margin-bottom: 5px;
+    cursor: pointer;
+    &:after,
+    &:before {
+      content: '';
+      position: absolute;
+      right: 11px;
+      top: 11px;
+      width: 20px;
+      height: 20px;
+      border-radius: 3px;
+      background: lighten($accentcolor, 15%);
+    }
+    &:before {
+      background: transparent;
+      transition: 0.1s width cubic-bezier(0.075, 0.82, 0.165, 1) 0s,
+        0.3s height cubic-bezier(0.075, 0.82, 0.165, 2) 0.1s;
+      z-index: 2;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: 13px;
+      background-position: center;
+      width: 0;
+      height: 0;
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNS4zIDEzLjIiPiAgPHBhdGggZmlsbD0iI2ZmZiIgZD0iTTE0LjcuOGwtLjQtLjRhMS43IDEuNyAwIDAgMC0yLjMuMUw1LjIgOC4yIDMgNi40YTEuNyAxLjcgMCAwIDAtMi4zLjFMLjQgN2ExLjcgMS43IDAgMCAwIC4xIDIuM2wzLjggMy41YTEuNyAxLjcgMCAwIDAgMi40LS4xTDE1IDMuMWExLjcgMS43IDAgMCAwLS4yLTIuM3oiIGRhdGEtbmFtZT0iUGZhZCA0Ii8+PC9zdmc+);
+    }
+  }
+  input[type='radio'] {
+    display: none;
+    position: absolute;
+    width: 100%;
+    appearance: none;
+    &:checked + label {
+      background: lighten($accentcolor, 15%);
+      animation-name: blink;
+      animation-duration: 1s;
+      border-color: $accentcolor;
+      &:after {
+        background: $accentcolor;
+      }
+      &:before {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+}
+
+@keyframes blink {
+  0% {
+    background-color: lighten($accentcolor, 15%);
+  }
+  10% {
+    background-color: lighten($accentcolor, 15%);
+  }
+  11% {
+    background-color: lighten($accentcolor, 20%);
+  }
+  29% {
+    background-color: lighten($accentcolor, 20%);
+  }
+  30% {
+    background-color: lighten($accentcolor, 15%);
+  }
+  50% {
+    background-color: lighten($accentcolor, 20%);
+  }
+  45% {
+    background-color: lighten($accentcolor, 15%);
+  }
+  50% {
+    background-color: lighten($accentcolor, 20%);
+  }
+  100% {
+    background-color: lighten($accentcolor, 15%);
+  }
+}
+
+hr {
+  width: 80%;
+  border: 1px solid rgba(204, 204, 204, 0.358);
+  margin-bottom: 2em;
+}
