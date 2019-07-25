@@ -56,6 +56,7 @@ export default class Slider extends React.Component {
       hex = '#' + pad('FFFFFF');
     }
     this.setState({ hexValue: hex });
+    document.body.style.backgroundColor = hex;
     function pad(n) {
       return n.length < 2 ? '0' + n : n;
     }
@@ -63,59 +64,56 @@ export default class Slider extends React.Component {
 
   render() {
     return (
-      <div className="colorChangeContainer">
-        <div
-          className="hexCode"
-          style={{ backgroundColor: `${this.state.hexValue}` }}
-        >
-          {this.state.hexValue}
+      <>
+        <div className="colorChangeContainer">
+          <div className="hexCode">{this.state.hexValue}</div>
+          <fieldset>
+            <label className="sliderLabel">R</label>
+            <input
+              className="slider"
+              type="range"
+              min="0"
+              max="7"
+              step="1"
+              value={this.rValue}
+              onChange={this.handleSliderRChange}
+              onInput={this.handleSetColor}
+            />
+            <output className="sliderLabel">{`${this.state.rValue}`}</output>
+          </fieldset>
+
+          <fieldset>
+            <label className="sliderLabel">G</label>
+            <input
+              className="slider"
+              type="range"
+              min="0"
+              max="7"
+              step="1"
+              value={this.gValue}
+              onChange={this.handleSliderGChange}
+              onInput={this.handleSetColor}
+            />
+            <output className="sliderLabel">{`${this.state.gValue}`}</output>
+          </fieldset>
+
+          <fieldset>
+            <label className="sliderLabel">B</label>
+            <input
+              className="slider"
+              type="range"
+              min="0"
+              max="7"
+              step="1"
+              value={this.bValue}
+              onChange={this.handleSliderBChange}
+              onInput={this.handleSetColor}
+            />
+            <output className="sliderLabel">{`${this.state.bValue}`}</output>
+          </fieldset>
+          <button>Submit</button>
         </div>
-        <fieldset>
-          <label className="sliderLabel">R</label>
-          <input
-            className="slider"
-            type="range"
-            min="0"
-            max="7"
-            step="1"
-            value={this.rValue}
-            onChange={this.handleSliderRChange}
-            onInput={this.handleSetColor}
-          />
-          <output className="sliderLabel">{`${this.state.rValue}`}</output>
-        </fieldset>
-
-        <fieldset>
-          <label className="sliderLabel">G</label>
-          <input
-            className="slider"
-            type="range"
-            min="0"
-            max="7"
-            step="1"
-            value={this.gValue}
-            onChange={this.handleSliderGChange}
-            onInput={this.handleSetColor}
-          />
-          <output className="sliderLabel">{`${this.state.gValue}`}</output>
-        </fieldset>
-
-        <fieldset>
-          <label className="sliderLabel">B</label>
-          <input
-            className="slider"
-            type="range"
-            min="0"
-            max="7"
-            step="1"
-            value={this.bValue}
-            onChange={this.handleSliderBChange}
-            onInput={this.handleSetColor}
-          />
-          <output className="sliderLabel">{`${this.state.bValue}`}</output>
-        </fieldset>
-        <button>Submit</button>
-      </div>
+      </>
     );
   }
 }

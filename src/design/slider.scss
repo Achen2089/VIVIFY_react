@@ -3,13 +3,14 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border-top: 2px solid white;
+  margin-top: 16em;
+  // border-top: 2px solid white;
 }
 
 fieldset {
   border: none;
-  margin-bottom: 4em;
-  width: 50%;
+  margin-bottom: 1.5em;
+  width: 30%;
   color: white;
   align-items: center;
 }
@@ -19,22 +20,23 @@ fieldset {
 }
 
 .hexCode {
-  margin-top: 2em;
-  margin-bottom: 1.5em;
-  padding: 0.75em;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  padding: 4px;
   width: 15%;
   text-align: center;
-  font-size: 3em;
+  font-size: 2em;
   border-radius: 0.3em;
+  color: white;
 }
 
 .slider {
-  width: 90%;
+  width: 85%;
   -webkit-appearance: none;
   height: 15px;
   border-radius: 10px;
   border: 2px solid rgba(255, 255, 255, 0.865);
-  background: #4c4c4d;
+  background: transparent;
   outline: none;
   -webkit-transition: 0.02s;
   transition: opacity 0.2s;
@@ -53,17 +55,18 @@ fieldset {
 }
 
 button {
-  background-color: rgb(184, 184, 184);
-  border: none;
+  margin-top: 1em;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
   outline: none;
   cursor: pointer;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bold;
-  padding: 0.75em;
-  border-radius: 0.3em;
-  width: 20%;
+  padding: 0.5em;
+  width: 15%;
 }
 
 button:hover {
-  background-color: gray;
+  background-color: rgba(51, 58, 91, 0.742);
 }
