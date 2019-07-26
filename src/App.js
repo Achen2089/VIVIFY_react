@@ -3,7 +3,7 @@ import Nav from './components/nav';
 import Color from './components/color';
 import Cycle from './components/cycle';
 import { Route } from 'react-router-dom';
-import background from './images/vivify1.png';
+import background from './images/color.png';
 
 import './design/app.scss';
 

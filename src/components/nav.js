@@ -1,9 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../design/nav.scss';
-import logo from '../images/logo.png';
+import colorBackground from '../images/color.png';
+import cycleBackground from '../images/cycle.png';
+
+import logo from '../images/vivify-logo.png';
 
 export default class Nav extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      background: '',
+    };
+  }
+
+  handleToColorBackgroundChange = event => {
+    this.setState({ route: 'color' });
+  };
+
+  handleToCycleBackgroundChange = event => {
+    this.setState({ route: 'cycle' });
+  };
+
   render() {
     return (
       <>
@@ -17,6 +35,7 @@ export default class Nav extends React.Component {
                 color: 'white',
                 letterSpacing: '2px',
               }}
+              onClick={this.handleToColorBackgroundChange}
             >
               Color
             </Link>
@@ -30,6 +49,7 @@ export default class Nav extends React.Component {
                 color: 'white',
                 letterSpacing: '2px',
               }}
+              onClick={this.handleToCycleBackgroundChange}
             >
               Cycle
             </Link>

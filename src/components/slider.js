@@ -66,7 +66,9 @@ export default class Slider extends React.Component {
     return (
       <>
         <div className="colorChangeContainer">
-          <div className="hexCode">{this.state.hexValue}</div>
+          <div className="hexCode" style={{ color: `${this.state.hexValue}` }}>
+            {this.state.hexValue}{' '}
+          </div>
           <fieldset>
             <label className="sliderLabel">R</label>
             <input
@@ -97,7 +99,7 @@ export default class Slider extends React.Component {
             <output className="sliderLabel">{`${this.state.gValue}`}</output>
           </fieldset>
 
-          <fieldset>
+          <fieldset id="lastFieldset">
             <label className="sliderLabel">B</label>
             <input
               className="slider"
@@ -111,6 +113,14 @@ export default class Slider extends React.Component {
             />
             <output className="sliderLabel">{`${this.state.bValue}`}</output>
           </fieldset>
+          <div id="onAndOff">
+            <div id="on">
+              <h1>on</h1>
+            </div>
+            <div>
+              <h1>off</h1>
+            </div>
+          </div>
           <button>Submit</button>
         </div>
       </>

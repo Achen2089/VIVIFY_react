@@ -3,8 +3,7 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  margin-top: 16em;
-  // border-top: 2px solid white;
+  margin-top: 15%;
 }
 
 fieldset {
@@ -20,7 +19,7 @@ fieldset {
 }
 
 .hexCode {
-  margin-top: 1em;
+  // margin-top: 1em;
   margin-bottom: 0.5em;
   padding: 4px;
   width: 15%;
@@ -69,4 +68,18 @@ button {
 
 button:hover {
   background-color: rgba(51, 58, 91, 0.742);
+}
+
+#onAndOff {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+}
+
+#on {
+  margin-right: 3em;
+}
+
+#lastFieldset {
+  margin-bottom: 0;
 }
