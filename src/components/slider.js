@@ -9,19 +9,41 @@ export default class Slider extends React.Component {
       gValue: 0,
       bValue: 0,
       hexValue: '#FFFFFF',
+      selected: '',
     };
   }
 
   handleSliderRChange = event => {
-    this.setState({ rValue: event.target.value });
+    this.setState(
+      {
+        rValue: event.target.value,
+      },
+      () => {
+        this.handleSetColor(this.state.rValue);
+      }
+    );
   };
 
   handleSliderGChange = event => {
-    this.setState({ gValue: event.target.value });
+    this.setState(
+      {
+        gValue: event.target.value,
+      },
+      () => {
+        this.handleSetColor(this.state.gValue);
+      }
+    );
   };
 
   handleSliderBChange = event => {
-    this.setState({ bValue: event.target.value });
+    this.setState(
+      {
+        bValue: event.target.value,
+      },
+      () => {
+        this.handleSetColor(this.state.bValue);
+      }
+    );
   };
 
   handleSetColor = event => {
@@ -32,7 +54,6 @@ export default class Slider extends React.Component {
       parseInt(this.state.rValue) +
       parseInt(this.state.gValue) +
       parseInt(this.state.bValue);
-    console.log(sum);
     if (sum !== 0) {
       R_convert = Math.round(255 * (this.state.rValue / sum));
       G_convert = Math.round(255 * (this.state.gValue / sum));
@@ -62,6 +83,10 @@ export default class Slider extends React.Component {
     }
   };
 
+  handleSelect = event => {
+    this.setState({ selected: event.target.value });
+  };
+
   render() {
     return (
       <>
@@ -77,9 +102,8 @@ export default class Slider extends React.Component {
               min="0"
               max="7"
               step="1"
-              value={this.rValue}
+              value={this.state.rValue}
               onChange={this.handleSliderRChange}
-              onInput={this.handleSetColor}
             />
             <output className="sliderLabel">{`${this.state.rValue}`}</output>
           </fieldset>
@@ -92,9 +116,8 @@ export default class Slider extends React.Component {
               min="0"
               max="7"
               step="1"
-              value={this.gValue}
+              value={this.state.gValue}
               onChange={this.handleSliderGChange}
-              onInput={this.handleSetColor}
             />
             <output className="sliderLabel">{`${this.state.gValue}`}</output>
           </fieldset>
@@ -107,18 +130,35 @@ export default class Slider extends React.Component {
               min="0"
               max="7"
               step="1"
-              value={this.bValue}
+              value={this.state.bValue}
               onChange={this.handleSliderBChange}
-              onInput={this.handleSetColor}
             />
             <output className="sliderLabel">{`${this.state.bValue}`}</output>
           </fieldset>
-          <div id="onAndOff">
-            <div id="on">
-              <h1>on</h1>
-            </div>
-            <div>
-              <h1>off</h1>
+          <div id="onAndOffLabels">
+            <div id="onAndOff">
+              <div id="on">
+                <h1>tx</h1>
+                <input
+                  type="checkbox"
+                  id="toggle1"
+                  class="checkbox"
+                  value="tx"
+                  onChange={this.handleSelect}
+                />
+                <label for="toggle1" class="switch" />
+              </div>
+              <div>
+                <h1>rx</h1>
+                <input
+                  type="checkbox"
+                  id="toggle2"
+                  class="checkbox"
+                  value="rx"
+                  onChange={this.handleSelect}
+                />
+                <label for="toggle2" class="switch" />
+              </div>
             </div>
           </div>
           <button>Submit</button>

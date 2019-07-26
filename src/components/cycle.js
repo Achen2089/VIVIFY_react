@@ -5,7 +5,7 @@ export default class Cycle extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selected: '',
+      selectedMethod: '',
       checked: '',
     };
   }
