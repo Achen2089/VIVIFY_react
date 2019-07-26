@@ -113,13 +113,25 @@ export default class Slider extends React.Component {
             />
             <output className="sliderLabel">{`${this.state.bValue}`}</output>
           </fieldset>
-          <div id="onAndOff">
-            <div id="on">
-              <h1>on</h1>
+          <div id="onAndOffLabels">
+            <div id="onAndOff">
+              {/* <h2>label</h2> */}
+              <div id="on">
+                <h1>on</h1>
+              </div>
+              <div>
+                <h1>off</h1>
+              </div>
             </div>
-            <div>
-              <h1>off</h1>
-            </div>
+            {/* <div id="onAndOff">
+              <h2>label</h2>
+              <div id="on">
+                <h1>on</h1>
+              </div>
+              <div>
+                <h1>off</h1>
+              </div>
+            </div> */}
           </div>
           <button>Submit</button>
         </div>

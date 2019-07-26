@@ -72,6 +72,7 @@ button:hover {
 
 #onAndOff {
   display: flex;
+  align-items: center;
   justify-content: space-evenly;
   color: white;
 }
@@ -82,4 +83,8 @@ button:hover {
 
 #lastFieldset {
   margin-bottom: 0;
+}
+
+#onAndOffLabels {
+  display: flex;
 }
