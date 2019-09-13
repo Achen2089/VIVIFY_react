@@ -8,14 +8,14 @@ export const ColorContext = React.createContext();
 
 var first, second, third, fourth;
 var matrix = [
-  [1, 1, 1, 1, 0, 1, 0, 1],
+ // [1,1,1,1,0,1,0,1],
   [1, 1, 0, 0, 0, 0, 0, 1],
   [1, 0, 0, 0, 0, 0, 0, 0],
   [0, 1, 0, 0, 0, 1, 1, 1],
   [0, 0, 1, 1, 1, 1, 1, 1],
   [0, 1, 0, 0, 0, 1, 1, 0],
 ];
-//var fin_hex = "cool"
+//var fin_dec = "cool"
 export default class ContextProvider extends React.Component {
   constructor(props) {
     super(props);
@@ -478,27 +478,7 @@ export default class ContextProvider extends React.Component {
         );
       }
     }, 1000);
-    clearInterval(first);
-    clearInterval(second);
-    clearInterval(third);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5C580472F46F5C580472F46');
-    }, 10);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5C580472F46F5C580472F46');
-    }, 20);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5C580472F46F5C580472F46');
-    }, 1030);
-    first = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5C580472F46F5C580472F46');
-    }, 1030);
-    second = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5C580472F46F5C580472F46');
-    }, 1040);
-    third = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5C580472F46F5C580472F46');
-    }, 2040);
+    ipcRenderer.send('user-data', [197, 128, 71, 47]);
   };
 
   handleGlint1DifferentColor = event => {
@@ -535,24 +515,7 @@ export default class ContextProvider extends React.Component {
         );
       }
     }, 1000);
-    clearInterval(first);
-    clearInterval(second);
-    clearInterval(third);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', '5C580472F46F5C580472F46');
-    }, 10);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', '5C580472F46F5C580472F46');
-    }, 20);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5CB80472F46F5CB80472F46');
-    }, 70);
-    first = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5CB80472F46F5CB80472F46');
-    }, 1010);
-    second = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5CB80472F46F5CB80472F46');
-    }, 1020);
+    ipcRenderer.send('user-data', [203, 128, 71, 47]);
   };
 
   handleGlint2SameColor = event => {
@@ -589,27 +552,7 @@ export default class ContextProvider extends React.Component {
         );
       }
     }, 2000);
-    clearInterval(first);
-    clearInterval(second);
-    clearInterval(third);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5D580472F46F5D580472F46');
-    }, 10);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5D580472F46F5D580472F46');
-    }, 20);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'FF5D580472F46F5D580472F46');
-    }, 1030);
-    first = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5D580472F46F5D580472F46');
-    }, 1030);
-    second = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5D580472F46F5D580472F46');
-    }, 1040);
-    third = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5D580472F46F5D580472F46');
-    }, 2040);
+    ipcRenderer.send('user-data', [213, 128, 71, 47]);
   };
 
   handleGlint2DifferentColor = event => {
@@ -646,24 +589,7 @@ export default class ContextProvider extends React.Component {
         );
       }
     }, 2000);
-    clearInterval(first);
-    clearInterval(second);
-    clearInterval(third);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5D580472F46F5D580472F46');
-    }, 10);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5D580472F46F5D580472F46');
-    }, 20);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5DB80472F46');
-    }, 70);
-    first = setInterval(function() {
-      ipcRenderer.send('user-data', 'FF5DB80472F46');
-    }, 1010);
-    second = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5DB80472F46');
-    }, 1020);
+    ipcRenderer.send('user-data', [219, 128, 71, 47]);
   };
 
   handleBreathe1SameColor = event => {
@@ -673,27 +599,7 @@ export default class ContextProvider extends React.Component {
       },
     });
     injectStyle(breatheKeyframe);
-    clearInterval(first);
-    clearInterval(second);
-    clearInterval(third);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5E780472F46F5E780472F46');
-    }, 10);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5E780472F46F5E780472F46');
-    }, 20);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5E780472F46F5E780472F46');
-    }, 1030);
-    first = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5E780472F46F5E780472F46');
-    }, 1030);
-    second = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5E780472F46F5E780472F46');
-    }, 1040);
-    third = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5E780472F46F5E780472F46');
-    }, 2040);
+    ipcRenderer.send('user-data' , [231, 128, 71, 47])
   };
 
   handleBreathe1DifferentColor = event => {
@@ -703,24 +609,7 @@ export default class ContextProvider extends React.Component {
       },
     });
     injectStyle(breatheKeyframe);
-    clearInterval(first);
-    clearInterval(second);
-    clearInterval(third);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5E780472F46F5E780472F46');
-    }, 10);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5E780472F46F5E780472F46');
-    }, 20);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5EB80472F46F5EB80472F46');
-    }, 70);
-    first = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5EB80472F46F5EB80472F46');
-    }, 1010);
-    second = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5EB80472F46F5EB80472F46');
-    }, 1020);
+    ipcRenderer.send('user-data', [235, 128, 71, 47]);
   };
 
   handleBreathe2SameColor = event => {
@@ -730,27 +619,7 @@ export default class ContextProvider extends React.Component {
       },
     });
     injectStyle(breatheKeyframe);
-    clearInterval(first);
-    clearInterval(second);
-    clearInterval(third);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5F780472F46F5F780472F46');
-    }, 10);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5F780472F46F5F780472F46');
-    }, 20);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5F780472F46F5F780472F46');
-    }, 1030);
-    first = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5F780472F46F5F780472F46');
-    }, 1030);
-    second = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5F780472F46F5F780472F46');
-    }, 1040);
-    third = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5F780472F46F5F780472F46');
-    }, 2040);
+    ipcRenderer.send('user-data', [247, 128, 71, 47]);
   };
 
   handleBreathe2DifferentColor = event => {
@@ -760,24 +629,7 @@ export default class ContextProvider extends React.Component {
       },
     });
     injectStyle(breatheKeyframe);
-    clearInterval(first);
-    clearInterval(second);
-    clearInterval(third);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5F780472F46F5F780472F46');
-    }, 10);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5F780472F46F5F780472F46');
-    }, 20);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', 'F5FB80472F46');
-    }, 70);
-    first = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5FB80472F46');
-    }, 1010);
-    second = setInterval(function() {
-      ipcRenderer.send('user-data', 'F5FB80472F46');
-    }, 1020);
+    ipcRenderer.send('user-data', [251, 128, 71, 47]);
   };
 
   read_red = event => {
@@ -958,32 +810,11 @@ export default class ContextProvider extends React.Component {
   };
 
   sendData(input) {
-    clearInterval(first);
-    clearInterval(second);
-    clearInterval(third);
-    clearInterval(fourth);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', input);
-    }, 10);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', input);
-    }, 20);
-    setTimeout(function() {
-      ipcRenderer.send('user-data', input);
-    }, 1030);
-    first = setInterval(function() {
-      ipcRenderer.send('user-data', input);
-    }, 1030);
-    second = setInterval(function() {
-      ipcRenderer.send('user-data', input);
-    }, 1040);
-    third = setInterval(function() {
-      ipcRenderer.send('user-data', input);
-    }, 2040);
+    ipcRenderer.send('user-data', input);
   }
 
-  Matrix_to_Hex = even => {
-    var fin_hex = '';
+  Matrix_to_Dec = even => {
+    var fin_dec = [];
     for (var i = 0; i < matrix.length; i++) {
       var dec_val = 0;
       var k = 0;
@@ -992,11 +823,9 @@ export default class ContextProvider extends React.Component {
         dec_val += Math.pow(2, j) * matrix[i][k];
         k++;
       }
-      //console.log(dec_val.toString(16).toUpperCase())
-      fin_hex += dec_val.toString(16).toUpperCase();
+      fin_dec.push(dec_val);
     }
-    console.log(fin_hex);
-    this.sendData(fin_hex);
+    this.sendData(fin_dec);
   };
 
   submit = even => {
@@ -1005,7 +834,7 @@ export default class ContextProvider extends React.Component {
     this.read_blue();
     this.toggle_Rx();
     this.toggle_Tx();
-    this.Matrix_to_Hex();
+    this.Matrix_to_Dec();
     this.toggle_flash();
   };
 
