@@ -1,0 +1,235 @@
+.colorChangeContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.523);
+  width: 62%;
+  height: 61%;
+  padding: 2.5em;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.fieldSet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2%;
+  width: 100%;
+  color: white;
+}
+
+.sliderLabel {
+  font-size: 1.5em;
+}
+
+.hexCode {
+  width: 15%;
+  text-align: center;
+  font-size: 2em;
+  border-radius: 0.3em;
+  color: white;
+}
+
+.slider {
+  width: 38em;
+  -webkit-appearance: none;
+  height: 15px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.865);
+  background: transparent;
+  outline: none;
+  -webkit-transition: 0.02s;
+  transition: opacity 0.2s;
+  margin-right: 1em;
+  margin-left: 1em;
+  z-index: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  font-size: 1.3em;
+  font-weight: bold;
+  padding: 1%;
+  padding-right: 3%;
+  padding-left: 3%;
+  margin-top: 0;
+}
+
+button:hover {
+  background-color: rgba(51, 58, 91, 0.742);
+}
+
+button:active {
+  background-color: rgba(128, 128, 128, 0.646);
+}
+
+#txAndRx {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.labelAndToggle {
+  margin-right: 1em;
+}
+
+#lastFieldset {
+  margin-bottom: 0;
+}
+
+#toggleOptions {
+  display: flex;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 25px;
+  background-color: rgb(212, 226, 240);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.switch:hover {
+  background-color: rgba(213, 227, 242, 0.79);
+}
+
+.switch::after {
+  content: '';
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: white;
+  top: 1px; // TO GIVE AN EFFECT OF CIRCLE INSIDE SWITCH.
+  left: 1px;
+  transition: all 0.3s;
+}
+
+.checkbox:checked + .switch::after {
+  left: 20px;
+}
+.checkbox:checked + .switch {
+  background-color: #181a46;
+}
+
+.checkbox {
+  display: none;
+}
+
+.labelAndToggle {
+  display: flex;
+  align-items: center;
+}
+
+.labelForToggle {
+  margin-right: 0.2em;
+  font-size: 1.5em;
+}
+@media screen and (min-width: 700px) {
+  .colorChangeContainer {
+    top: 53%;
+  }
+  button {
+    margin-top: 0.75em;
+  }
+}
+@media screen and (min-width: 800px) {
+  .colorChangeContainer {
+    top: 60%;
+  }
+  button {
+    margin-top: 0.75em;
+  }
+}
+
+@media screen and (min-width: 975px) {
+  .colorChangeContainer {
+    top: 55%;
+  }
+  button {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .colorChangeContainer {
+    top: 57%;
+  }
+  button {
+    margin-top: 1em;
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .colorChangeContainer {
+    top: 61%;
+    width: 40%;
+  }
+  .slider {
+    width: 50em;
+  }
+  button {
+    margin-top: 1em;
+    padding: 2%;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .switch {
+    width: 54px;
+    height: 33px;
+  }
+
+  .switch::after {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .colorChangeContainer {
+    top: 65%;
+    width: 40%;
+  }
+  .slider {
+    width: 50em;
+  }
+  button {
+    margin-top: 2em;
+    padding: 2%;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+  .labelAndToggle {
+    margin-top: 1em;
+  }
+  .switch {
+    width: 50px;
+    height: 35px;
+  }
+
+  .switch::after {
+    width: 32px;
+    height: 32px;
+  }
+}

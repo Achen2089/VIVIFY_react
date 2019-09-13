@@ -2,18 +2,46 @@
   "name": "vivfy-react",
   "version": "0.1.0",
   "private": true,
+  "description": "this is the application to interface the vivify cable",
+  "author": "Anthony Chen",
+  "build": {
+    "buildDependenciesFromSource": true,
+    "nodeGypRebuild": false,
+    "npmRebuild": false,
+    "appId": "your.id",
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  },
+  "main": "public/electron.js",
+  "homepage": "./",
   "dependencies": {
+    "concurrently": "^4.1.1",
+    "cross-env": "^5.2.0",
+    "electron-is-dev": "^1.1.0",
+    "node-hid": "^0.7.9",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
+    "react-scripts": "3.0.1",
+    "serialport": "^7.1.5",
+    "styled-components": "^4.3.2",
+    "tinycolor2": "^1.4.1",
+    "wait-on": "^3.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "react-build": "react-scripts build",
+    "postinstall": "echo \"tag-prefix=@serialport/bindings@\" > ./node_modules/@serialport/bindings/.prebuild-installrc && electron-builder install-app-deps",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "electron-build": "electron-builder",
+    "electron-dev": "concurrently \"BROWSER=none npm run start\" \"wait-on http://localhost:3000 && electron .\"",
+    "build": "npm run react-build && electron-builder --publish=never",
+    "pack": "electron-builder --dir",
+    "dist:mac": "electron-builder",
+    "dist:win": "electron-builder --win"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,5 +57,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "electron": "^5.0.9",
+    "electron-builder": "^21.2.0",
+    "electron-rebuild": "^1.8.5",
+    "foreman": "^3.0.1"
   }
 }

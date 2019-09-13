@@ -1,0 +1,13 @@
+#gx-logo {
+  margin-top: 10%;
+  fill: #000000;
+  stroke: #666;
+  stroke-width: 7.5;
+  stroke-linecap: round;
+  stroke-linejoin: bevel;
+}
+@media screen and (min-width: 975px) {
+  #gx-logo {
+    margin-top: 6em;
+  }
+}

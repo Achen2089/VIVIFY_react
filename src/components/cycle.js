@@ -1,18 +1,9 @@
 import React from 'react';
+import { ColorContext } from './context/color-context';
 import '../design/cycle.scss';
 
 export default class Cycle extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedMethod: '',
-      checked: '',
-    };
-  }
-  handleOptionChange = event => {
-    this.setState({ selectedMethod: event.target.value, checked: true });
-  };
-
+  static contextType = ColorContext;
   render() {
     return (
       <div id="cycleContainer">
@@ -25,33 +16,43 @@ export default class Cycle extends React.Component {
                 eiusmod tempor.
               </p>
             </div>
-            <div className="radioButton">
-              <input
-                type="radio"
-                value="glint1SameColor"
-                id="glint1SameColor"
-                onChange={this.handleOptionChange}
-                checked={this.state.selectedMethod === 'glint1SameColor'}
-              />
-              <label for="glint1SameColor" class="cycleLabel">
-                Same Color
-              </label>
-            </div>
-            <div className="radioButton">
-              <input
-                type="radio"
-                value="glint1DifferentColor"
-                id="glint1DifferentColor"
-                onChange={this.handleOptionChange}
-                checked={this.state.selectedMethod === 'glint1DifferentColor'}
-              />
-              <label for="glint1DifferentColor" class="cycleLabel">
-                Different Color
-              </label>
+            <div className="options">
+              <div className="radioButton">
+                <input
+                  class="cycleInput"
+                  type="radio"
+                  value="Glint1SameColor"
+                  id="Glint1SameColor"
+                  onClick={this.context.handleLight}
+                  onChange={this.context.handleGlint1SameColor}
+                  checked={
+                    this.context.selectedRunningLight === 'Glint1SameColor'
+                  }
+                />
+                <label for="Glint1SameColor" class="cycleLabel">
+                  Same Color
+                </label>
+              </div>
+              <div className="radioButton">
+                <input
+                  class="cycleInput"
+                  type="radio"
+                  value="Glint1DifferentColor"
+                  id="Glint1DifferentColor"
+                  onClick={this.context.handleLight}
+                  onChange={this.context.handleGlint1DifferentColor}
+                  checked={
+                    this.context.selectedRunningLight === 'Glint1DifferentColor'
+                  }
+                />
+                <label for="Glint1DifferentColor" class="cycleLabel">
+                  Different Color
+                </label>
+              </div>
             </div>
           </div>
 
-          <hr />
+          {/* <hr /> */}
 
           <div className="cycleOptions">
             <div className="cycleDescription">
@@ -63,31 +64,39 @@ export default class Cycle extends React.Component {
             </div>
             <div className="radioButton">
               <input
+                class="cycleInput"
                 type="radio"
-                value="glint2SameColor"
-                id="glint2SameColor"
-                onChange={this.handleOptionChange}
-                checked={this.state.selectedMethod === 'glint2SameColor'}
+                value="Glint2SameColor"
+                id="Glint2SameColor"
+                onClick={this.context.handleLight}
+                onChange={this.context.handleGlint2SameColor}
+                checked={
+                  this.context.selectedRunningLight === 'Glint2SameColor'
+                }
               />
-              <label for="glint2SameColor" class="cycleLabel">
+              <label for="Glint2SameColor" class="cycleLabel">
                 Same Color
               </label>
             </div>
             <div className="radioButton">
               <input
+                class="cycleInput"
                 type="radio"
-                value="glint2DifferentColor"
-                id="glint2DifferentColor"
-                onChange={this.handleOptionChange}
-                checked={this.state.selectedMethod === 'glint2DifferentColor'}
+                value="Glint2DifferentColor"
+                id="Glint2DifferentColor"
+                onClick={this.context.handleLight}
+                onChange={this.context.handleGlint2DifferentColor}
+                checked={
+                  this.context.selectedRunningLight === 'Glint2DifferentColor'
+                }
               />
-              <label for="glint2DifferentColor" class="cycleLabel">
+              <label for="Glint2DifferentColor" class="cycleLabel">
                 Different Color
               </label>
             </div>
           </div>
 
-          <hr />
+          {/* <hr /> */}
 
           <div className="cycleOptions">
             <div className="cycleDescription">
@@ -99,31 +108,39 @@ export default class Cycle extends React.Component {
             </div>
             <div className="radioButton">
               <input
+                class="cycleInput"
                 type="radio"
-                value="breathe1SameColor"
-                id="breathe1SameColor"
-                onChange={this.handleOptionChange}
-                checked={this.state.selectedMethod === 'breathe1SameColor'}
+                value="Breathe1SameColor"
+                id="Breathe1SameColor"
+                onClick={this.context.handleLight}
+                onChange={this.context.handleBreathe1SameColor}
+                checked={
+                  this.context.selectedRunningLight === 'Breathe1SameColor'
+                }
               />
-              <label for="breathe1SameColor" class="cycleLabel">
+              <label for="Breathe1SameColor" class="cycleLabel">
                 Same Color
               </label>
             </div>
             <div className="radioButton">
               <input
+                class="cycleInput"
                 type="radio"
-                value="breathe1DifferentColor"
-                id="breathe1DifferentColor"
-                onChange={this.handleOptionChange}
-                checked={this.state.selectedMethod === 'breathe1DifferentColor'}
+                value="Breathe1DifferentColor"
+                id="Breathe1DifferentColor"
+                onClick={this.context.handleLight}
+                onChange={this.context.handleBreathe1DifferentColor}
+                checked={
+                  this.context.selectedRunningLight === 'Breathe1DifferentColor'
+                }
               />
-              <label for="breathe1DifferentColor" class="cycleLabel">
+              <label for="Breathe1DifferentColor" class="cycleLabel">
                 Different Color
               </label>
             </div>
           </div>
 
-          <hr />
+          {/* <hr /> */}
 
           <div className="cycleOptions">
             <div className="cycleDescription">
@@ -135,25 +152,33 @@ export default class Cycle extends React.Component {
             </div>
             <div className="radioButton">
               <input
+                class="cycleInput"
                 type="radio"
-                value="breathe2SameColor"
-                id="breathe2SameColor"
-                onChange={this.handleOptionChange}
-                checked={this.state.selectedMethod === 'breathe2SameColor'}
+                value="Breathe2SameColor"
+                id="Breathe2SameColor"
+                onClick={this.context.handleLight}
+                onChange={this.context.handleBreathe2SameColor}
+                checked={
+                  this.context.selectedRunningLight === 'Breathe2SameColor'
+                }
               />
-              <label for="breathe2SameColor" class="cycleLabel">
+              <label for="Breathe2SameColor" class="cycleLabel">
                 Same Color
               </label>
             </div>
             <div className="radioButton">
               <input
+                class="cycleInput"
                 type="radio"
-                value="breathe2DifferentColor"
-                id="breathe2DifferentColor"
-                onChange={this.handleOptionChange}
-                checked={this.state.selectedMethod === 'breathe2DifferentColor'}
+                value="Breathe2DifferentColor"
+                id="Breathe2DifferentColor"
+                onClick={this.context.handleLight}
+                onChange={this.context.handleBreathe2DifferentColor}
+                checked={
+                  this.context.selectedRunningLight === 'Breathe2DifferentColor'
+                }
               />
-              <label for="breathe2DifferentColor" class="cycleLabel">
+              <label for="Breathe2DifferentColor" class="cycleLabel">
                 Different Color
               </label>
             </div>

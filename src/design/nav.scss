@@ -1,8 +1,21 @@
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Mitr&display=swap');
+
 ul {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 3px;
   margin-top: -10px;
-  width: 99%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   padding: 1em;
   margin-bottom: 0;
   list-style-type: none;
@@ -10,16 +23,91 @@ ul {
 }
 
 li {
-  margin-right: 3em;
+  margin-left: 3em;
   display: block;
-  padding: 0.5em;
+  padding: 0.25em;
   width: 5em;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.4em;
   color: white;
-  // border: 1px solid white;
 }
 
 li:hover {
   background-color: rgba(26, 29, 46, 0.557);
+}
+
+#logo {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  z-index: 1;
+  color: white;
+  width: 8.75em;
+}
+
+#vivify {
+  position: absolute;
+  left: 65px;
+  top: 7px;
+  z-index: 1;
+  color: white;
+  letter-spacing: 7px;
+  font-size: 2.25em;
+  font-family: 'Mitr', sans-serif;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+label[for='select'] {
+  position: relative;
+  display: block;
+  width: 125px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+label[for='select']::after {
+  content: ' ';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 40px;
+  height: 100%;
+  display: block;
+  background: #000000ba
+    url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAOBAMAAAGq7RFVAAAAJ1BMVEX///////////////////////////////////////////////////9Ruv0SAAAADHRSTlMACAoREoKDt7y9zc5qtZoyAAAAcklEQVQIHQXBsQnCUAAFwFOCCKbIABaWERzi1yaFAzmEpHYEC8GUKVQEkbyhvOOkZqdWt0/QYKqLzQeF7dv6y/RLwa2wYtk4Xxxe+t8yd1WuM/rcUc2gYHEeoP02umSgTR50ybBPRuiSZAS6ZAQ4jgCAPyjYJiRH4fymAAAAAElFTkSuQmCC')
+    no-repeat center center;
+  pointer-events: none;
+}
+
+label[for='select'] select {
+  color: white;
+  border: none;
+  background: rgba(0, 0, 0, 0.29);
+  padding: 7px 20px 7px 20px;
+  width: 100%;
+  font-size: 1.2em;
+  cursor: pointer;
+  font-family: 'Oswald', sans-serif;
+}
+
+label[for='select'] select::-ms-expand {
+  display: none;
+}
+
+label[for='select'] :-moz-any(select) {
+  width: 110%;
+}
+
+label[for='select'].ie9 select {
+  width: 110%;
+}
+
+label[for='select'] select:focus {
+  outline: none;
 }
