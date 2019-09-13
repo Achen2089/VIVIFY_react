@@ -8,7 +8,7 @@ export const ColorContext = React.createContext();
 
 var first, second, third, fourth;
 var matrix = [
- // [1,1,1,1,0,1,0,1],
+  [1, 1, 1, 1, 0, 1, 0, 1],
   [1, 1, 0, 0, 0, 0, 0, 1],
   [1, 0, 0, 0, 0, 0, 0, 0],
   [0, 1, 0, 0, 0, 1, 1, 1],
@@ -478,7 +478,7 @@ export default class ContextProvider extends React.Component {
         );
       }
     }, 1000);
-    ipcRenderer.send('user-data', [197, 128, 71, 47]);
+    ipcRenderer.send('user-data', [245, 197, 128, 71, 47]);
   };
 
   handleGlint1DifferentColor = event => {
@@ -515,7 +515,7 @@ export default class ContextProvider extends React.Component {
         );
       }
     }, 1000);
-    ipcRenderer.send('user-data', [203, 128, 71, 47]);
+    ipcRenderer.send('user-data', [245, 203, 128, 71, 47]);
   };
 
   handleGlint2SameColor = event => {
@@ -552,7 +552,7 @@ export default class ContextProvider extends React.Component {
         );
       }
     }, 2000);
-    ipcRenderer.send('user-data', [213, 128, 71, 47]);
+    ipcRenderer.send('user-data', [245, 213, 128, 71, 47]);
   };
 
   handleGlint2DifferentColor = event => {
@@ -589,7 +589,7 @@ export default class ContextProvider extends React.Component {
         );
       }
     }, 2000);
-    ipcRenderer.send('user-data', [219, 128, 71, 47]);
+    ipcRenderer.send('user-data', [245, 219, 128, 71, 47]);
   };
 
   handleBreathe1SameColor = event => {
@@ -599,7 +599,7 @@ export default class ContextProvider extends React.Component {
       },
     });
     injectStyle(breatheKeyframe);
-    ipcRenderer.send('user-data' , [231, 128, 71, 47])
+    ipcRenderer.send('user-data' , [245, 231, 128, 71, 47])
   };
 
   handleBreathe1DifferentColor = event => {
@@ -609,7 +609,7 @@ export default class ContextProvider extends React.Component {
       },
     });
     injectStyle(breatheKeyframe);
-    ipcRenderer.send('user-data', [235, 128, 71, 47]);
+    ipcRenderer.send('user-data', [245, 235, 128, 71, 47]);
   };
 
   handleBreathe2SameColor = event => {
@@ -619,7 +619,7 @@ export default class ContextProvider extends React.Component {
       },
     });
     injectStyle(breatheKeyframe);
-    ipcRenderer.send('user-data', [247, 128, 71, 47]);
+    ipcRenderer.send('user-data', [245, 247, 128, 71, 47]);
   };
 
   handleBreathe2DifferentColor = event => {
@@ -629,7 +629,7 @@ export default class ContextProvider extends React.Component {
       },
     });
     injectStyle(breatheKeyframe);
-    ipcRenderer.send('user-data', [251, 128, 71, 47]);
+    ipcRenderer.send('user-data', [245, 251, 128, 71, 47]);
   };
 
   read_red = event => {
